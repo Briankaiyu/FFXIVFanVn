@@ -1,0 +1,30 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/dagan_quest.rpy", line 57, in script
+    show dagan bent neutral here
+Exception: Image 'dagan bent neutral' does not accept attributes 'here'.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/dagan_quest.rpy", line 57, in script
+    show dagan bent neutral here
+  File "B:\Renpy\renpy-8.3.4-sdk\renpy\ast.py", line 1117, in execute
+    show_imspec(self.imspec, atl=getattr(self, "atl", None))
+  File "B:\Renpy\renpy-8.3.4-sdk\renpy\ast.py", line 1080, in show_imspec
+    renpy.config.show(name,
+  File "B:\Renpy\renpy-8.3.4-sdk\renpy\exports\displayexports.py", line 477, in show
+    if not base.find_target() and renpy.config.missing_show:
+  File "B:\Renpy\renpy-8.3.4-sdk\renpy\display\image.py", line 421, in find_target
+    self.target = target._duplicate(a)
+  File "B:\Renpy\renpy-8.3.4-sdk\renpy\display\displayable.py", line 249, in _duplicate
+    args.extraneous()
+  File "B:\Renpy\renpy-8.3.4-sdk\renpy\display\displayable.py", line 109, in extraneous
+    raise Exception("Image '{}' does not accept attributes '{}'.".format(
+Exception: Image 'dagan bent neutral' does not accept attributes 'here'.
+
+Windows-10-10.0.19045 AMD64
+Ren'Py 8.3.4.24120703
+SimpleProject .01_Dev
+Mon May 19 09:34:51 2025
