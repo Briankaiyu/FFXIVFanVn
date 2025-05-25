@@ -1,9 +1,24 @@
 default astra_points = 0
+define receptionist = Character("Receptionist")
+
 label astra_quest:
 
-    "You take the paper off of the job board and see that there is a doodled map deoicting a volcano, dragons, and chocobos."
-    "It seems to be pointing you towards the Dravanian Forelands."
-    "You figure you should ask around Tailfeather."
+    "You can’t help but notice the start of the quests’ shenanigans as the receptionist glances at the document and back at you."
+    receptionist "\"Thank you, for accepting this… quest.\" She states with some bemusement as she too flips the page around a few times. Seemingly puzzled at how something this unprofessional could’ve ended up on the quest board."
+    "Some rather frantic and frustrated flipping through records ensues, but somehow the receptionist does come back with an item to send along on your quest. Placing it on the counter and looking expectant at you to know what it is."
+    "A fist-sized red ball sits lightly on the counter. From one end, a single large and very worn yellow feather is attached with twine."
+    menu:
+        "Take the item to save face.":
+            pass
+        "What is this supposed to be?":
+            receptionist "I’m afraid I couldn’t tell you. I’m actually quite surprised to see anything associated with this quest."
+            receptionist "From how poor- *ahem* From how the paperwork looks, it had seemed to be something placed without our knowledge, but from the looks of it someone working here did speak to the poster and seems to have not filled out the necessary documentation."
+    receptionist "I’m so sorry we don’t have more information, but from the looks of it you have things well in hand. Thank you again for accepting this most desperate quest, and I wish you the best in its resolution."
+    "She gives you a slight bow as you depart the counter."    
+    "Your attention returns to the drawn map and now with the ratted feather for comparison you can almost make out the doodled birds as chocobos."
+    p "Dravanian Forelands?"
+    "You ponder the idea. The volcano really should have been a dead giveaway, but the longer you decipher the scratches of color the more the geography lines up."
+    p "Well then. Off to Tailfeather."
 
     scene tailfeather
 

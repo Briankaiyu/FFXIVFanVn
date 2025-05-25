@@ -83,95 +83,33 @@ label job_board:
     menu:
         "What quest do you check? (Pretend the background is a job board)"
 
-        "Astra's Assassin-Free Fishing":
-
-            "(Proceed to Draft Questline or Astra Tech Demo)"
-            menu:
-                "Draft Questline":
-                    "The sign reads: URGENT HELP NEEDED! DEATH IMMINENT"
-                    "No other information is provided."
-                    menu:
-                        "Accept the quest?"
-                        "Yes":
-                            jump astra_quest
-                        "No":
-                            jump job_board 
-                "Astra Tech Demo":
-                    "Proceeding with demo."
-
-            "After accepting the quest you head over to listed location: A local fishing hole."
-
-            "There, you find a Miqo'te standing by the water, next to a mascot chicken head."
-
-            show astra concept neutral with dissolve
-
-            "Her eyes remain focused on her lure as it bobs gently in the lake. She doesn't appear to have noticed you yet."
-            
-            p "Hello?"
-
-            show astra concept confused
-
-            a "Oh! Um, hello! I didn't see you there. Would you mind doing me a quick favor?"
-
-            menu:
-                "Sure":
-
-                    show astra concept neutral
-                    p "Sure."
-                    jump astra_demo
-                   
-                "No.":
-                    show astra concept neutral
-                    p "Nah."
-
-                    show astra concept upset
-
-                    a "..."
-
-                    p "..."
-
-                    show astra concept speaking
-                    a "What if I told you it's a really important favor?"
-
-                    menu astra_bit:
-                        "Fine, I'll do it":
-                            $ astra_denial=0
-                            jump astra_demo
-                        "No":
-                            if astra_denial==0:
-                                show astra concept upset
-                                a "..."
-                                p "..."
-                                show astra concept speaking
-                                a "...please?"
-                                $ astra_denial+=1 
-                                jump astra_bit
-                            if astra_denial==1:
-                                show astra concept upset
-                                a "..."
-                                p "..."
-                                show astra concept speaking
-                                a "...pretty please?" 
-                                $ astra_denial+=1 
-                                jump astra_bit
-                            if astra_denial==2:
-                                show astra concept upset
-                                a "..."
-                                p "..."
-                                show astra concept speaking
-                                a "...You know this will keep going until you say yes, right?" 
-                                $ astra_denial+=1 
-                                jump astra_bit
-                            if astra_denial>=3:      
-                                show astra concept upset
-                                a "..."
-                                p "..."
-                                show astra concept speaking
-                                a "...I could go for longer, but this is the last unique line I have for your shenanigans right now." 
-                                $ astra_denial+=1 
-                                jump astra_bit                                                                                                 
-  
-            jump job_board 
+        "Astra’s Kidnapping":
+                "You’ve found yourself staring at the quest board, skimming through the collection of fetch quests and escort missions that nobody ever seems to pick up."
+                "How up to date is this board? You wonder as you note a few requests mentioning the Garlean outposts nearby." 
+                "Curiosity plucked a parchment from the board, the pin holding it clinking to the ground before rolling down beneath the floorboards followed by the slow descent of another quest landing on your boot."
+                "A pound beats in your chest as you easily read the large letters fallen at your feet."
+                "Unable to resist, you snatch it up and give it a look over."
+                "{size=*1.5}URGENT HELP NEEDED! DEATH IMMINENT{/size}"
+                "Several poorly drawn faces with crossed out eyes cover the paper in place of any actual description."
+                menu:
+                    "Take a closer look.":
+                        "While the form itself appears to be a proper quest form, it would seem the writer has included no helpful information. You can’t help but notice they’ve failed to even keep the writing on the lines provided."
+                p "Is this a real quest?"        
+                menu:
+                    "Turn the page over?":
+                        pass
+                    "Turn the page over.":
+                        pass
+                "On the back is a doodled map seeming to indicate a red smoking mountain with a bunch of angry red and yellow birds in the sky and at its base. A waterfall and river in… green? Seems to be drawn off to the right."
+                "A giant arrow seems to be pointing to a spot on the river, but it is too vague to discern an actual location."
+                "You flip the page back, its foreboding words don’t provide a lot to go off of, but then again you’ve taken stranger requests before."
+                menu:
+                    "Accept the quest":
+                        jump astra_quest
+                    "Pin it back to the wall":
+                        jump job_board
+        
+        
         "A Great Hunt":
             "Higher up on the job board is a small scrawled note requesting a strong hunter interested in testing their mettle. There also appears to be a crudely drawn beast on the paper with a sword stabbing it."
 
