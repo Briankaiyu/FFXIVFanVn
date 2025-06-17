@@ -26,6 +26,15 @@ image astra concept confused = "Astra/Astra Concept Confused.png"
 image astra concept speaking = "Astra/Astra Concept Speaking.png"
 image astra concept upset = "Astra/Astra Concept Upset.png"
 image astra concept chicken = "Astra/Astra Concept Chicken.png"
+image astra chicken = "Astra/Astra_Chicken.png"
+image astra chicken angry = "Astra/Astra_Chicken_Angry.png"
+image astra chicken sad = "Astra/Astra_Chicken_Sad.png"
+image astra chicken surprise = "Astra/Astra_Chicken_Surprise.png"
+image astra cri = "Astra/Astra_Cri.png"
+image astra grin = "Astra/Astra_Grin.png"
+image astra perplex = "Astra/Astra_Perplex.png"
+image astra pout = "Astra/Astra_Pout.png"
+image astra smile = "Astra/Astra_Smile.png"
 
 define dm = Character("???",color="#2E381A")
 define d = Character("Dagan", color="#2E381A", image="dagan")
